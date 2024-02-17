@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Bulma Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+  <div id="app">
+    <!--Navbar-->
+    <!--Collumns!!!-->
+      
+      
+
+
+
+        <div class="column is-one-half" style="margin-left: 15%;">
+             <!--2nd Collumn! <input class="input is-link" type="text" placeholder="New Task"> -->
+
+
+
+                       
+
+              <!--Github thingy-->
+              <!--V show inside is javascript-->
+          <article class="message is-success" v-show="showAlert">
+            <div class="message-header">
+              <p>{{ message }}</p>
+              <button  @click="showAlert=false" class="delete" aria-label="delete"></button>
+            </div>
+            <div class="message-body">
+                Go to <a href="https://github.com/">github.com</a> and create an account.
+                That's where you'll be able to share your work with the world.. thats where we will be putting all of our code for this class.
+                            
+            </div>
+            <progress class="progress is-success" value="60" max="100">60%</progress>
+          </article>
+
+
+           
+
+
+        </div>
+
+
+
+
+
+
+       
+      </div>
+
+
+
+
+      <!--All vue is controlling is this scrip-->
+      </div>
+
+        <script type="module">
+          import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+        //import package above ^
+
+          createApp({
+            setup() {
+              //Since javascript has no types, need to declare the type of the variable? use let instead of var
+              //constants dont change, lets do
+              //ref and reactive lets the varibles and lets change. Super important!
+              //show alert is changed back to const
+              const message = ref('Hello Vue!')
+              const showAlert = ref(true)
+              const isMenuActive = ref(false)
+              return {
+                message, showAlert, isMenuActive              
+              }
+            }
+          }).mount('#app')
+        </script>
+  <!--Pinning this script to the div id "app"-->
+
+
+</body>
+</html>
