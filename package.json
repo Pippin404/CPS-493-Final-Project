@@ -1,0 +1,19 @@
+{
+  "name": "cps-493-web-server-programming",
+  "version": "1.0.0",
+  "description": "A Repository for my CPS 493 classwork, Following along with the professor",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js --watch server/"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
