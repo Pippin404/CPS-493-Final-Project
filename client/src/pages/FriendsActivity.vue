@@ -1,6 +1,8 @@
 <script 
     setup lang="ts">
-    let isCollapsed = (false);
+    import { RouterLink } from 'vue-router';
+    import { ref } from 'vue';
+    let isCollapsed = ref(false);
 </script>
 
 <template>
