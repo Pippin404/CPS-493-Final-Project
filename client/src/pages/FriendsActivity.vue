@@ -1,6 +1,6 @@
 <script 
     setup lang="ts">
-    let isCollapsed = (true);
+    let isCollapsed = (false);
 </script>
 
 <template>
@@ -17,11 +17,11 @@
             </p>
             <a class="card-header-icon" aria-label="delete" @click="isCollapsed = !isCollapsed">
                 <span class="icon">
-                    <i class="fas fa-angle-down" :class="{'is-active': !isCollapsed}"></i>
+                    <i class="fas fa-angle-down" :class="{'is-active': !isCollapsed} "></i>
                 </span>
             </a>
         </header>
-        <div class="card-content" v-show="!isCollapsed">
+        <div class="card-content " v-show="!isCollapsed ">
             <div class="content">
                 <!-- Add your documentation content here -->
                 <p>Documentation content</p>
