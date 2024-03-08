@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 
+
 let isActive = ref(false);
 
 function toggleMenu() {
@@ -16,7 +17,11 @@ function toggleMenu() {
 <nav class="navbar is-primary m-auto" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item">
-      <img src="../assets/vite.svg" width="28" height="28">
+      <RouterLink to="/documentation" class="navbar-item">
+      
+        <img src="../assets/vite.svg" width="28" height="28">
+      
+      </RouterLink>
     </a>
 
     <a role="button" @click="toggleMenu" :class="{'is-active': isActive } " class="navbar-burger m-auto" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -30,19 +35,39 @@ function toggleMenu() {
     <div class="navbar-start">
       
       <RouterLink to="/documentation" class="navbar-item m-auto">
-        Activity
+        <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-running"></i>
+        </span>
+        <span>Activity</span>
+      </span>
       </RouterLink>
 
-      <RouterLink to="/documentation" class="navbar-item">
-        Statistics
+      <RouterLink to="/Statistics" class="navbar-item">
+        <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-chart-line"></i>
+        </span>
+        <span>Stats</span>
+      </span>
       </RouterLink>
 
       <RouterLink to="/FriendsActivity" class="navbar-item">
-        Friends Activity
+        <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-users"></i>
+        </span>
+        <span>Friends Acivity</span>
+      </span>
       </RouterLink>
 
-      <RouterLink to="/documentation" class="navbar-item">
-        People Search
+      <RouterLink to="/search" class="navbar-item">
+        <span class="icon-text">
+        <span class="icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span>People Search</span>
+      </span>
       </RouterLink>
 
       <div class="navbar-item has-dropdown is-hoverable">
