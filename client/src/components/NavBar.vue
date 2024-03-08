@@ -13,26 +13,23 @@ function toggleMenu() {
 
 
 <template>
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+<nav class="navbar is-primary m-auto" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item">
+      <img src="../assets/vite.svg" width="28" height="28">
     </a>
 
-    <a role="button" @click="toggleMenu" :class="{'is-active': isActive } " class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" @click="toggleMenu" :class="{'is-active': isActive } " class="navbar-burger m-auto" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div :class="{ 'is-active': isActive } " id="navbarBasicExample" class="navbar-menu"  >
+  <div :class="{ 'is-active': isActive } " id="navbarBasicExample" class="navbar-menu m-auto"  >
     <div class="navbar-start">
-      <RouterLink to="/" class="navbar-item">
-        Home
-      </RouterLink>
-
-      <RouterLink to="/documentation" class="navbar-item">
+      
+      <RouterLink to="/documentation" class="navbar-item m-auto">
         Activity
       </RouterLink>
 
