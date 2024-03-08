@@ -5,22 +5,126 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
 
     
+    <div class="columns">
     
 
 
 
+      <!--Card 1-->
+      <div class="column column is-half is-offset-one-quarter">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Today
+            </p>
 
 
+            <p class="subtitle value">
+              0 Ft
+            </p>
+            <p class="subtitle value">
+              0 Calories
+            </p>
+            <p class="subtitle value r">
+              Duration: 0 min
+            </p>
+            <p class="subtitle value r">
+              Avr. Pace: 0ft
+            </p>
 
+
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              This Week
+            </p>
+
+
+            <p class="subtitle value">
+              0 Ft
+            </p>
+            <p class="subtitle value">
+              0 Calories
+            </p>
+            <p class="subtitle value r">
+              Duration: 0 min
+            </p>
+            <p class="subtitle value r">
+              Avr. Pace: 0ft
+            </p>
+
+
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              All Time
+            </p>
+
+
+            <p class="subtitle value">
+              0 Ft
+            </p>
+            <p class="subtitle value">
+              0 Calories
+            </p>
+            <p class="subtitle value r">
+              Duration: 0 min
+            </p>
+            <p class="subtitle value r">
+              Avr. Pace: 0ft
+            </p>
+
+
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
 
 
   </body>
+
+
+  <style>
+    .column {
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .value{
+      color:hsl(171, 100%, 41%);
+      font-weight: bolder;
+    }
+    .title{
+      text-align: center;
+      font-size: 30px; 
+      font-weight: bold;
+    }
+
+    .r{
+      text-align: right;
+    }
+  </style>
+</html>
+      
+    
+    </style>
 </html>
