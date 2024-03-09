@@ -5,8 +5,7 @@ export interface Root {
     firstName: string
     lastName: string
     email: string   
-    admin: boolean
-
+    admin: boolean 
   }
 
 export function getitems(): Root[] {
