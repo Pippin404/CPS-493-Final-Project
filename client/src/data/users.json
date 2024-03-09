@@ -1,0 +1,23 @@
+
+{
+    "items": [
+        {
+            "firstName": "Moshe",
+            "lastName": "Plotkin",
+            "admin": true,
+            "email": "plotkinm@newpaltz.edu"
+        },
+        {
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "admin": false,
+            "email": "jane.smith@example.com"
+        },
+        {
+            "firstName": "Mike",
+            "lastName": "Johnson",
+            "admin": false,
+            "email": "mike.johnson@example.com"
+        }
+    ]
+}
