@@ -61,7 +61,7 @@ function toggleMenu() {
       </span>
       </RouterLink>
 
-      <RouterLink to="/products" class="navbar-item">
+      <RouterLink to="/" class="navbar-item">
         <span class="icon-text">
         <span class="icon">
           <i class="fas fa-search"></i>
@@ -76,7 +76,7 @@ function toggleMenu() {
         </a>
 
         <div class="navbar-dropdown">
-          <RouterLink to="/about" class="navbar-item">
+          <RouterLink to="/products" class="navbar-item">
             Users
           </RouterLink>
         </div>
