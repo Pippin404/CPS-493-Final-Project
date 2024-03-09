@@ -1,13 +1,16 @@
 <script setup lang="ts">
-    import { ref, computed } from 'vue';
+    import { ref, computed, onMounted } from 'vue';
     import { type Root, getitems } from "@/model/users";
     const products = ref([] as Root[]);
+
+    onMounted(async () => {
+        products.value = await getitems();
+    });
 </script>
 
 
 
 <template>
-
 
       
     
@@ -30,7 +33,6 @@
     </div>    
 
     
-<p>this should display</p>
 
 
 

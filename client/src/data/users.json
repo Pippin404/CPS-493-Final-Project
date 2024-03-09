@@ -19,5 +19,8 @@
             "admin": false,
             "email": "mike.johnson@example.com"
         }
-    ]
+    ],
+    "total": 100,
+    "skip": 0,
+    "limit": 30
 }
