@@ -10,7 +10,7 @@
 
 
       
-
+    
     <!--IMPORTANT SHIT!!-->
     <div class="product-list">
                 <div v-for="product in products" class="card">
@@ -30,7 +30,7 @@
     </div>    
 
     
-
+<p>this should display</p>
 
 
 
