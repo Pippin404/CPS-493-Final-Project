@@ -6,6 +6,7 @@ export interface Root {
     lastName: string
     email: string   
     admin: boolean 
+    image: string
   }
 
 export function getitems(): Root[] {

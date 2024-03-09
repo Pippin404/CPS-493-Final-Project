@@ -5,19 +5,22 @@
             "firstName": "Moshe",
             "lastName": "Plotkin",
             "admin": true,
-            "email": "plotkinm@newpaltz.edu"
+            "email": "plotkinm@newpaltz.edu",
+            "image": "src/assets/iconAdmin.png"
         },
         {
             "firstName": "Jane",
             "lastName": "Smith",
             "admin": false,
-            "email": "jane.smith@example.com"
+            "email": "jane.smith@example.com",
+            "image": "src/assets/icon2.png"
         },
         {
             "firstName": "Mike",
             "lastName": "Johnson",
             "admin": false,
-            "email": "mike.johnson@example.com"
+            "email": "mike.johnson@example.com",
+            "image": "src/assets/icon3.png"
         }
     ],
     "total": 100,

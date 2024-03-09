@@ -93,7 +93,7 @@ function toggleMenu() {
       </div>
     </div>
     
-      <div class="navbar-item has-dropdown is-hoverable  button is-light">
+      <div class="navbar-item has-dropdown is-hoverable  button is-light margin">
           <a class="navbar-link">
             Log in
           </a>
@@ -103,10 +103,10 @@ function toggleMenu() {
               Moshe
             </RouterLink>
             <RouterLink to="/about" class="navbar-item">
-              Person1
+              Jane Smith
             </RouterLink>
             <RouterLink to="/about" class="navbar-item">
-              Person2
+              Mike Johnson
             </RouterLink>
 
           </div>
@@ -116,7 +116,7 @@ function toggleMenu() {
 
 
         <p class="control">
-            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+            <a class="bd-tw-button button margin" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
               <span class="icon">
                 <i class="fab fa-twitter"></i>
               </span>
@@ -138,5 +138,7 @@ function toggleMenu() {
         border-bottom: 2px solid #00d1b2;
     }
 
-
+    .margin{
+      margin:7px;
+    }
 </style>

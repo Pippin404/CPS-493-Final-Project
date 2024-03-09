@@ -27,6 +27,7 @@
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
             <tr>
+                <th>        </th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -36,6 +37,7 @@
         </thead>
         <tbody>
             <tr v-for="product in products" :key="product.email">
+                <td><img :src="product.image" alt="Product image" class="small"></td>
                 <td>{{ product.firstName }}</td>
                 <td>{{ product.lastName }}</td>
                 <td>{{ product.email }}</td>
@@ -73,5 +75,12 @@
 
     .tr{
         margin: 50px;
+    }
+
+    
+
+    .small{
+        width: 50px;
+        height: 50px;
     }
 </style>
