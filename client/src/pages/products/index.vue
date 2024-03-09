@@ -12,28 +12,19 @@
 
     
     
-    <!--IMPORTANT SHIT!!-->
-        <div class="product-list">
-                <div v-for="product in products" class="card">
-            <div class="card-image">
-                
-                <div class="card-content">
 
-                <h3>{{ product.firstName }}</h3>
-                        <h3>{{ product.lastName }}</h3>
-                        <h3>{{ product.email }}</h3>
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="#">My Exercise</a></li>
+            <li><a href="#">Admin</a></li>
+            <li class="is-active"><a href="#" aria-current="page">users</a></li>
+        </ul>
+    </nav>
 
-                
-
-                </div>
-             </div>
-        </div>
-    </div>
+    <button class="button is-primary">+Add User</button>
 
 
-
-
-    <table>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -49,28 +40,21 @@
                 <td>{{ product.lastName }}</td>
                 <td>{{ product.email }}</td>
                 <td>{{ product.admin }}</td>
-                <td>                    </td>
+                <td>                   
+                    <button class="button is-primary fas fa-edit"></button>
+                    <button class="button is-danger fas fa-trash"></button>
+                
+                </td>
             </tr>
         </tbody>
     </table>
-
-
-
-
 </template>
-        
-       
-
-
 
 <style scoped>
-
     .card {
-
         flex-basis: 15rem;
         flex-grow: 1;
         margin: .5rem;
-
     }
 
     .product-list {
@@ -79,5 +63,15 @@
         justify-content: center;
     }
 
+    .table {
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 90%; /* Adjust the width as needed */
+        max-width: 1200px; /* Set a maximum width if desired */
+    }
 
+    .tr{
+        margin: 50px;
+    }
 </style>
