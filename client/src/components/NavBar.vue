@@ -17,7 +17,7 @@ function toggleMenu() {
 <nav class="navbar is-primary m-auto" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item">
-      <RouterLink to="/documentation" class="navbar-item">
+      <RouterLink to="/" class="navbar-item">
       
         <img src="../assets/vite.svg" width="28" height="28">
       
