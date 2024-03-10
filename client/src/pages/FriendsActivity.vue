@@ -3,6 +3,10 @@ import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 let isCollapsed = ref(false);
 let showPopup = ref(false);
+//Import time baby
+import { type Root, getitems } from "@/model/products";
+    const products = ref([] as Root[]);
+
 </script>
 
 <template>
