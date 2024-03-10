@@ -11,6 +11,54 @@
     </div>
 
 
+    <form>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="email" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Place</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Enter the place">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Distance</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Enter the distance">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Duration</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Enter the duration">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Date</label>
+            <div class="control">
+                <input class="input" type="date" placeholder="Enter the date">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Enter the image URL">
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
 
     <div class="card">
         <header class="card-header">
