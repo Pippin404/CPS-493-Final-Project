@@ -57,6 +57,12 @@ let showPopup = ref(false);
                                 </div>
                             </div>
                             <div class="field">
+                                <label class="label">Type</label>
+                                <div class="control">
+                                    <input class="input" type="type" placeholder="What kind?">
+                                </div>
+                            </div>
+                            <div class="field">
                                 <label class="label">Image</label>
                                 <div class="control">
                                     <input class="input" type="text" placeholder="Enter the image URL">
@@ -80,25 +86,24 @@ let showPopup = ref(false);
                 <div class="card-content">
                     <div class="content">
                         <p>This is a Bulma card.</p>
+
+                        
+                        <div class="icons">
+                            <button class="button is-primary is-outlined">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <button class="button is-primary is-outlined">
+                                <i class="fas fa-retweet"></i>
+                            </button>
+                            <button class="button is-primary is-outlined">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-content">
-                    <div class="content">
-                        <p>This is a Bulma card.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <div class="content">
-                        <p>This is a Bulma card.</p>
-                    </div>
-                </div>
-            </div>
 
 
 
