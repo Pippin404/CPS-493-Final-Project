@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
 let isCollapsed = ref(false);
 let showPopup = ref(false);
+
+import { RouterLink } from 'vue-router';
 //Import time baby
-import { type Root, getitems } from "@/model/products";
+import { ref, computed, onMounted } from 'vue';
+    import { type Root, getitems } from "@/model/products";
     const products = ref([] as Root[]);
+
+    onMounted(async () => {
+        products.value = await getitems();
+    });
 
 </script>
 
@@ -103,11 +108,7 @@ import { type Root, getitems } from "@/model/products";
                 
                 <td>{{ product.email }}</td>
                 
-                <td>                   
-                    <button class="button is-primary fas fa-edit"></button>
-                    <button class="button is-danger fas fa-trash"></button>
                 
-                </td>
             </tr>
         </tbody>
     </table>
