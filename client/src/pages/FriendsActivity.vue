@@ -2,13 +2,13 @@
 let isCollapsed = ref(false);
 let showPopup = ref(false);
 
+
 //Import time baby
 import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
 function removeCard(product: Root) {
     products.value = products.value.filter(p => p !== product);
 }
-
 
 //Import product: the info of the excersises
 import { type Root, getitems } from "@/model/products";
@@ -23,7 +23,9 @@ onMounted(async () => {
     users.value = await getUsers();
 });
 
-
+function isMatchingEmail(userEmail: string, productEmail: string): boolean {
+  return userEmail === productEmail;
+}
 </script>
 
 <template>
@@ -110,7 +112,15 @@ onMounted(async () => {
                         <!--Display a persons info-->
                         <div class="user-list">
                         <div v-for="user in users" :key="user.email" class="card">
-                            <p class="userName"> {{ user.email === product.email ? user.firstName : '' }}</p>
+
+                            <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
+                                {{ user.firstName }}
+                                <img :src="user.image" class="userImage" alt="Product image" v-if="isMatchingEmail(user.email, product.email)">
+                            </p>
+                            <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
+                                {{  }}
+                            </p>
+                            
                         </div>  
                     </div>
 
@@ -171,5 +181,17 @@ onMounted(async () => {
         margin: 5px;
         cursor: pointer;
         color: #00d1b2;
+    }
+
+    .userInfo{
+        font-size: 30px;
+        color:black;
+        margin: 10px;
+    }
+
+    .userImage{
+
+        height: 40px;
+
     }
 </style>
