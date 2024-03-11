@@ -8,13 +8,13 @@ import { ref, computed, onMounted } from 'vue';
     import { type Root, getitems } from "@/model/products";
     const products = ref([] as Root[]);
 
-    onMounted(async () => {
-        products.value = await getitems();
-    });
+onMounted(async () => {
+    products.value = await getitems();
+});
 
-    function removeCard(product: Root) {
-        products.value = products.value.filter(p => p !== product);
-    }
+function removeCard(product: Root) {
+    products.value = products.value.filter(p => p !== product);
+}
 
 </script>
 
