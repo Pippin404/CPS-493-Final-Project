@@ -2,19 +2,20 @@
 let isCollapsed = ref(false);
 let showPopup = ref(false);
 
-import { RouterLink } from 'vue-router';
 //Import time baby
+import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
-    import { type Root, getitems } from "@/model/products";
-    const products = ref([] as Root[]);
-
-onMounted(async () => {
-    products.value = await getitems();
-});
-
 function removeCard(product: Root) {
     products.value = products.value.filter(p => p !== product);
 }
+
+
+//Import product: the info of the excersises
+import { type Root, getitems } from "@/model/products";
+const products = ref([] as Root[]);
+onMounted(async () => {
+    products.value = await getitems();
+});
 
 </script>
 
