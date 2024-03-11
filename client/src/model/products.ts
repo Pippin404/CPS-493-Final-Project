@@ -8,6 +8,7 @@ export interface Root {
     duration: number
     date: string
     image: string
+    type: string
   }
 
 export function getitems(): Root[] {

@@ -28,7 +28,7 @@ import { ref, computed, onMounted } from 'vue';
     
 
 
-            <button class="button is-medium is-fullwidth is-primary" @click="showPopup = true">Open Popup</button>
+            <button class="button is-medium is-fullwidth is-primary" @click="showPopup = true">Add Activity</button>
 
             <div v-if="showPopup" class="modal is-active">
                 <div class="modal-background"></div>
@@ -97,10 +97,23 @@ import { ref, computed, onMounted } from 'vue';
                 <div v-for="product in products" :key="product.email" class="card">
                     <div class="card-image">
                         <div class="card-content">
-                            <p>{{ product.email }}</p>
-                            <p>{{ product.distance }}</p>
-                            <p>{{ product.date }}</p>
                             <button class="delete" @click="removeCard(product)">Delete</button>
+
+                            <!--This should be a persons name!-->
+                            <h3 class="userName"> {{ product.email }}</h3>
+                            <h3 class="subtitle is-6"> At {{ product.date }}</h3>
+                            <br>
+
+                            <p class="subtitles">{{ product.type }} thru {{ product.place }}</p>
+                            <p class="subtitles"> Distance: {{ product.distance }}</p>
+                            <p class="subtitles"> Date: {{ product.date }}</p>  
+                            
+                            <div class="hoverable-icons">
+                                <i class="fas fa-reply"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -114,15 +127,30 @@ import { ref, computed, onMounted } from 'vue';
     </div>
 </template>
 <style scoped>
+    .userName{
+        font-weight: bold;
+        color:black;
+        font-size: 20px;
+    }
     .card{
         margin-top: 20px;
     }
-    .card-content{
-        display: flex;
-        
-    }
 
-    .delete{
+    .subtitles{
+        font-size: 15px;
+        color:black;
+        margin: 10px;
+    }
+    .delete {
         margin-left: auto;
+    }
+    
+    .hoverable-icons{
+        margin: 5px;
+    }
+    .fas{
+        margin: 5px;
+        cursor: pointer;
+        color: #00d1b2;
     }
 </style>
