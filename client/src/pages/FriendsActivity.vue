@@ -95,20 +95,7 @@ onMounted(async () => {
                 </section>
             </div>
         </div>
-
-
-        <div class="user-list">
-
-            <div v-for="user in users" :key="user.email" class="card">
-                <div class="card-image">
-                    <div class="card-content">
-                        <p class="userName"> {{ user.email }}</p>
-                    </div>
-                </div>
-            </div>  
-        </div>
-
-        
+      
 
 
 
@@ -120,25 +107,29 @@ onMounted(async () => {
                     <div class="card-content">
                         <button class="delete" @click="removeCard(product)">Delete</button>
 
-                        <!--This should be a persons name!-->
-                        <h3 class="userName"> {{ product.email }}</h3>
-                        <h3 class="subtitle is-6"> At {{ product.date }}</h3>
-                        <br>
-                        <img :src="product.image" alt="Product image" class="small">
-                        <p class="subtitles">{{ product.type }} thru {{ product.place }}</p>
-                        <p class="subtitles"> Distance: {{ product.distance }} Meters in {{ product.duration }} Minutes</p>
-                        <p class="subtitles"> Date: {{ product.date }}</p>  
-                        
-                        <div class="hoverable-icons">
-                            <i class="fas fa-reply"></i>
-                            <i class="fas fa-retweet"></i>
-                            <i class="fas fa-heart"></i>
-                        </div>
+                        <!--Display a persons info-->
+                        <div class="user-list">
+                        <div v-for="user in users" :key="user.email" class="card">
+                            <p class="userName"> {{ user.email === product.email ? user.firstName : '' }}</p>
+                        </div>  
+                    </div>
 
+                    <!--Other Card Content-->
+                    <h3 class="subtitle is-6"> At {{ product.date }}</h3>
+                    <br>
+                    <img :src="product.image" alt="Product image" class="small">
+                    <p class="subtitles">{{ product.type }} thru {{ product.place }}</p>
+                    <p class="subtitles"> Distance: {{ product.distance }} Meters in {{ product.duration }} Minutes</p>
+                    <p class="subtitles"> Date: {{ product.date }}</p>  
+                    <div class="hoverable-icons">
+                        <i class="fas fa-reply"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
