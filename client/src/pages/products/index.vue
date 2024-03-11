@@ -1,10 +1,10 @@
 <script setup lang="ts">
     import { ref, computed, onMounted } from 'vue';
-    import { type Root, getitems } from "@/model/users";
-    const products = ref([] as Root[]);
+    import { type UserRoot, getUsers } from "@/model/users";
+    const products = ref([] as UserRoot[]);
 
     onMounted(async () => {
-        products.value = await getitems();
+        products.value = await getUsers();
     });
 </script>
 

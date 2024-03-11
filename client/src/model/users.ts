@@ -1,7 +1,7 @@
 import data from "../data/users.json"
 import { ref } from 'vue';
 
-export interface Root {
+export interface UserRoot {
     firstName: string
     lastName: string
     email: string   
@@ -9,6 +9,6 @@ export interface Root {
     image: string
   }
 
-export function getitems(): Root[] {
+export function getUsers(): UserRoot[] {
     return data.items;
   }
