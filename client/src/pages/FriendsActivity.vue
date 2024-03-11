@@ -103,9 +103,9 @@ import { ref, computed, onMounted } from 'vue';
                             <h3 class="userName"> {{ product.email }}</h3>
                             <h3 class="subtitle is-6"> At {{ product.date }}</h3>
                             <br>
-
+                            <img :src="product.image" alt="Product image" class="small">
                             <p class="subtitles">{{ product.type }} thru {{ product.place }}</p>
-                            <p class="subtitles"> Distance: {{ product.distance }}</p>
+                            <p class="subtitles"> Distance: {{ product.distance }} Meters in {{ product.duration }} Minutes</p>
                             <p class="subtitles"> Date: {{ product.date }}</p>  
                             
                             <div class="hoverable-icons">
@@ -127,17 +127,24 @@ import { ref, computed, onMounted } from 'vue';
     </div>
 </template>
 <style scoped>
+
+    .small{
+        width: 30%;
+        margin: 30px;
+        float: right;
+    }
     .userName{
         font-weight: bold;
         color:black;
-        font-size: 20px;
+        font-size: 30px;
+        
     }
     .card{
         margin-top: 20px;
     }
 
     .subtitles{
-        font-size: 15px;
+        font-size: 20px;
         color:black;
         margin: 10px;
     }
