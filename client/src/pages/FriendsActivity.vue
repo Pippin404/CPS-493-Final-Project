@@ -89,47 +89,33 @@ import { ref, computed, onMounted } from 'vue';
 
 
 
+            <div class="product-list">
+                <div v-for="product in products" :key="product.email" class="card">
+        <div class="card-image">
+                <div class="card-content">
 
+                <h3>{{ product.email }}</h3>
+                <h3>{{ product.distance }}</h3>
+                <h3>{{ product.date }}</h3>
 
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-        <thead>
-            <tr>
-                <th>        </th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Admin</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="product in products" :key="product.email">
-                <td><img :src="product.image" alt="Product image" class="small"></td>
-                
-                <td>{{ product.email }}</td>
-                
-                
-            </tr>
-        </tbody>
-    </table>
-
-
-
+                </div>
+            </div>
+        </div>
+    </div>  
 
 
 
 
 
         </div>
-</div>
-
+    </div>
 </template>
-
 <style scoped>
-
-    
-
     .card{
         margin-top: 20px;
+    }
+    .card-content{
+        display: flex;
+        
     }
 </style>
