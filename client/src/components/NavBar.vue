@@ -61,7 +61,7 @@ function toggleMenu() {
       </span>
       </RouterLink>
 
-      <RouterLink to="/" class="navbar-item">
+      <RouterLink to="/search" class="navbar-item">
         <span class="icon-text">
         <span class="icon">
           <i class="fas fa-search"></i>

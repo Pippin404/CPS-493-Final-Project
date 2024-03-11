@@ -85,29 +85,32 @@ import { type Root, getitems } from "@/model/products";
 
 
 
-            <!--Card time baby!-->
-            <div class="card">
-                <div class="card-content">
-                    <div class="content">
-                        <p>This is a Bulma card.</p>
 
-                        
-                        <div class="icons">
-                            <button class="button is-primary is-outlined">
-                                <i class="fas fa-share"></i>
-                            </button>
-                            <button class="button is-primary is-outlined">
-                                <i class="fas fa-retweet"></i>
-                            </button>
-                            <button class="button is-primary is-outlined">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>        </th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Admin</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="product in products" :key="product.email">
+                <td><img :src="product.image" alt="Product image" class="small"></td>
+                
+                <td>{{ product.email }}</td>
+                
+                <td>                   
+                    <button class="button is-primary fas fa-edit"></button>
+                    <button class="button is-danger fas fa-trash"></button>
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
 
 
@@ -117,7 +120,7 @@ import { type Root, getitems } from "@/model/products";
 
 
         </div>
-    </div>
+</div>
 
 </template>
 
