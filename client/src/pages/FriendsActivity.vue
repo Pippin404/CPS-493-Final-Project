@@ -12,6 +12,10 @@ import { ref, computed, onMounted } from 'vue';
         products.value = await getitems();
     });
 
+    function removeCard(product: Root) {
+        products.value = products.value.filter(p => p !== product);
+    }
+
 </script>
 
 <template>
@@ -91,17 +95,16 @@ import { ref, computed, onMounted } from 'vue';
 
             <div class="product-list">
                 <div v-for="product in products" :key="product.email" class="card">
-        <div class="card-image">
-                <div class="card-content">
-
-                <h3>{{ product.email }}</h3>
-                <h3>{{ product.distance }}</h3>
-                <h3>{{ product.date }}</h3>
-
+                    <div class="card-image">
+                        <div class="card-content">
+                            <p>{{ product.email }}</p>
+                            <p>{{ product.distance }}</p>
+                            <p>{{ product.date }}</p>
+                            <button class="delete" @click="removeCard(product)">Delete</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>  
 
 
 
@@ -117,5 +120,9 @@ import { ref, computed, onMounted } from 'vue';
     .card-content{
         display: flex;
         
+    }
+
+    .delete{
+        margin-left: auto;
     }
 </style>
