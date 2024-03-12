@@ -13,7 +13,7 @@
                 Today
               </p>
   
-  
+              <!--Loops thru and displays the users Stats IF I CAN GET THE FUCKING PROFILE DATA FROM THE NAVBAR-->
               <p class="subtitle value">
                 0 Ft
               </p>

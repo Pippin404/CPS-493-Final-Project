@@ -15,7 +15,7 @@
     </p>
 
 
-
+    <!--Loops thru and displays the users Activities IF I CAN GET THE FUCKING PROFILE DATA FROM THE NAVBAR-->
 
 
 

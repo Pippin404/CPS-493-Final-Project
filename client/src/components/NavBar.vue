@@ -4,7 +4,7 @@ import { ref } from 'vue';
 
 
 const isActive = ref(false);
-const UserProfile=ref('Login');
+const UserProfile=ref('');
 
 
 function toggleMenu() {
