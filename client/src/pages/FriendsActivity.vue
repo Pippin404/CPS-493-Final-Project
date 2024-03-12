@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
 import { type ActivityData, getActivity } from "@/model/products";
 import { getUsers, type UserRoot } from '@/model/users';
+import UserInfo from '@/components/UserInfo.vue';
 
 const isCollapsed = ref(false);
 const showPopup = ref(false);
@@ -58,8 +59,6 @@ function saveActivity(){
                 <h1 class="title">Friends activity</h1>
 
         <button class="button is-medium is-fullwidth is-primary" @click="addActivity">Add Activity</button>
-
-
 
 
         <div v-if="newActivity" class="modal is-active">
