@@ -3,12 +3,13 @@ import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 
 
-let isActive = ref(false);
+const isActive = ref(false);
+const UserProfile=ref('Login');
+
 
 function toggleMenu() {
   isActive.value = !isActive.value;
 }
-
 </script>
 
 
@@ -87,7 +88,7 @@ function toggleMenu() {
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong>Sign up</strong>
+            <strong> {{UserProfile}}</strong>
           </a>
         </div>
       </div>
@@ -95,19 +96,19 @@ function toggleMenu() {
     
       <div class="navbar-item has-dropdown is-hoverable  button is-light margin">
           <a class="navbar-link">
-            Log in
+            Login
           </a>
           
           <div class="navbar-dropdown">
-            <RouterLink to="/about" class="navbar-item">
+            <div class="navbar-item" @click="UserProfile='plotkinm@newpaltz.edu'">
               Moshe
-            </RouterLink>
-            <RouterLink to="/about" class="navbar-item">
+            </div>
+            <div class="navbar-item" @click="UserProfile='jane.smith@example.com'">
               Jane Smith
-            </RouterLink>
-            <RouterLink to="/about" class="navbar-item">
+            </div>
+            <div class="navbar-item" @click="UserProfile='mike.johnson@example.com'">
               Mike Johnson
-            </RouterLink>
+            </div>
 
           </div>
         </div>
