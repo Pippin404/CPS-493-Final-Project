@@ -138,13 +138,13 @@ function saveActivity(){
                         <div class="user-list">
                         <div v-for="user in users" :key="user.email" class="card">
 
-                            <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
-                                {{ user.firstName }}
+                            <div class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
                                 <img :src="user.image" class="userImage" alt="Product image" v-if="isMatchingEmail(user.email, product.email)">
-                            </p>
-                            <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
+                                {{ user.firstName }}
+                            </div>
+                            <div class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
                                 {{  }}
-                            </p>
+                            </div>
                             
                         </div>  
                     </div>
