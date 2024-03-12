@@ -1,25 +1,23 @@
 <script setup lang="ts">
-const isCollapsed = ref(false);
-const showPopup = ref(false);
-
-const newActivity = ref<Root | null>(null);
-
-//Import time baby
 import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
+import { type Root, getitems } from "@/model/products";
+import { getUsers, type UserRoot } from '@/model/users';
+
+const isCollapsed = ref(false);
+const showPopup = ref(false);
+const newActivity = ref<Root | null>(null);
+//declaring the data arrays
+const products = ref([] as Root[]);
+const users = ref([] as UserRoot[]);
 function removeCard(product: Root) {
     products.value = products.value.filter(p => p !== product);
 }
 
-//Import product: the info of the excersises
-import { type Root, getitems } from "@/model/products";
-const products = ref([] as Root[]);
 onMounted(async () => {
     products.value = await getitems();
 });
 
-import { getUsers, type UserRoot } from '@/model/users';
-const users = ref([] as UserRoot[]);
 onMounted(async () => {
     users.value = await getUsers();
 });
@@ -140,7 +138,7 @@ function saveActivity(){
                         <div v-for="user in users" :key="user.email" class="card">
 
                             <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
-                                {{ user.firstName }}
+                                {{ user.firstName }};
                                 <img :src="user.image" class="userImage" alt="Product image" v-if="isMatchingEmail(user.email, product.email)">
                             </p>
                             <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
