@@ -95,10 +95,14 @@ function toggleMenu() {
     </div>
     
       <div class="navbar-item has-dropdown is-hoverable  button is-light margin">
-          <a class="navbar-link">
-            Login
+        <a class="navbar-link" v-if="UserProfile">
+            <a @click="UserProfile=''">
+            Logout
           </a>
-          
+        </a>
+        <a class="navbar-link" v-else>
+          Login
+      
           <div class="navbar-dropdown">
             <div class="navbar-item" @click="UserProfile='plotkinm@newpaltz.edu'">
               Moshe
@@ -109,8 +113,9 @@ function toggleMenu() {
             <div class="navbar-item" @click="UserProfile='mike.johnson@example.com'">
               Mike Johnson
             </div>
-
+          
           </div>
+        </a>
         </div>
 
 
