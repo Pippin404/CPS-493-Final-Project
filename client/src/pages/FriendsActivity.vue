@@ -3,7 +3,6 @@ import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
 import { type ActivityData, getActivity } from "@/model/products";
 import { getUsers, type UserRoot } from '@/model/users';
-import UserInfo from '@/components/UserInfo.vue';
 
 const isCollapsed = ref(false);
 const showPopup = ref(false);

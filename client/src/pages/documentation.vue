@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import UserInfo from '@/components/UserInfo.vue';
 </script>
 
 <template>
@@ -14,16 +13,6 @@
     <p>
         Logging in as Moshe should give you access to the Activity page as well as the admin pages (right now just users). Logging in as other should give you only the Activity page
     </p>
-
-
-      <UserInfo>
-        
-      </UserInfo>
-
-      <userInfo>
-
-      </userInfo>
-
 
 
 
