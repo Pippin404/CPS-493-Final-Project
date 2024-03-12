@@ -1,21 +1,22 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import { ref, computed, onMounted } from 'vue';
-import { type Root, getitems } from "@/model/products";
+import { type ActivityData, getActivity } from "@/model/products";
 import { getUsers, type UserRoot } from '@/model/users';
 
 const isCollapsed = ref(false);
 const showPopup = ref(false);
-const newActivity = ref<Root | null>(null);
+const newActivity = ref<ActivityData | null>(null);
 //declaring the data arrays
-const products = ref([] as Root[]);
+const products = ref([] as ActivityData[]);
 const users = ref([] as UserRoot[]);
-function removeCard(product: Root) {
+
+function removeCard(product: ActivityData) {
     products.value = products.value.filter(p => p !== product);
 }
 
 onMounted(async () => {
-    products.value = await getitems();
+    products.value = await getActivity();
 });
 
 onMounted(async () => {
@@ -138,7 +139,7 @@ function saveActivity(){
                         <div v-for="user in users" :key="user.email" class="card">
 
                             <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">
-                                {{ user.firstName }};
+                                {{ user.firstName }}
                                 <img :src="user.image" class="userImage" alt="Product image" v-if="isMatchingEmail(user.email, product.email)">
                             </p>
                             <p class="userInfo" v-if="isMatchingEmail(user.email, product.email)">

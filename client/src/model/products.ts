@@ -1,7 +1,7 @@
 import data from "../data/products.json"
 import { ref } from 'vue';
 
-export interface Root {
+export interface ActivityData {
     email: string   
     place: string
     distance: number
@@ -11,6 +11,6 @@ export interface Root {
     type: string
   }
 
-export function getitems(): Root[] {
+export function getActivity(): ActivityData[] {
     return data.items;
   }
