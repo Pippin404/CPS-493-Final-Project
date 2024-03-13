@@ -7,6 +7,11 @@ const isActive = ref(false);
 const UserProfile=ref('');
 //Need a function to check UserProfile. UserProfile is an email btw. 
 
+
+
+
+
+
 function toggleMenu() {
   isActive.value = !isActive.value;
 }
