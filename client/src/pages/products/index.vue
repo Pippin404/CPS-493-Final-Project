@@ -1,6 +1,4 @@
 <script setup lang="ts">
-    import { ref, computed, onMounted } from 'vue';
-    import { type UserRoot, getUsers } from "@/model/users";
     import UserList from "@/components/UserList.vue";
     import AddUser from '@/components/AddUser.vue';
 </script>
