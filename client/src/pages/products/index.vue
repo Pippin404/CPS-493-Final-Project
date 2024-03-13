@@ -6,13 +6,16 @@
     onMounted(async () => {
         products.value = await getUsers();
     });
+
+    const deleteProduct = (product: UserRoot) => {
+        const index = products.value.findIndex(p => p.email === product.email);
+        if (index !== -1) {
+            products.value.splice(index, 1);
+        }
+    };
 </script>
 
 <template>
-
-    
-    
-
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="#">My Exercise</a></li>
@@ -23,11 +26,10 @@
 
     <button class="button is-primary">+Add User</button>
 
-
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
             <tr>
-                <th>        </th>
+                <th></th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
@@ -44,8 +46,7 @@
                 <td>{{ product.admin }}</td>
                 <td>                   
                     <button class="button is-primary fas fa-edit"></button>
-                    <button class="button is-danger fas fa-trash"></button>
-                
+                    <button class="button is-danger fas fa-trash" @click="deleteProduct(product)"></button>
                 </td>
             </tr>
         </tbody>
@@ -69,15 +70,13 @@
         margin: 0 auto;
         margin-top: 5px;
         margin-bottom: 5px;
-        width: 90%; /* Adjust the width as needed */
-        max-width: 1200px; /* Set a maximum width if desired */
+        width: 90%; 
+        max-width: 1200px; 
     }
 
     .tr{
         margin: 50px;
     }
-
-    
 
     .small{
         width: 50px;
