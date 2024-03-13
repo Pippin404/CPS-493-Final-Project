@@ -7,11 +7,6 @@ const isActive = ref(false);
 const UserProfile=ref('');
 //Need a function to check UserProfile. UserProfile is an email btw. 
 
-
-
-
-
-
 function toggleMenu() {
   isActive.value = !isActive.value;
 }
@@ -117,7 +112,7 @@ function toggleMenu() {
             </div>
             <div class="navbar-item" @click="UserProfile='mike.johnson@example.com'">
               Mike Johnson
-            </div>
+          </div>
           
           </div>
         </a>
