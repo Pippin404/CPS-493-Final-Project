@@ -41,7 +41,7 @@ function saveUser(){
 <template>
     <div>
 
-        <button class="button is-medium is-fullwidth is-primary" @click="addUser">Add User</button>
+        <button class="button is-medium is-normal is-primary" @click="addUser">Add User</button>
 
 
         <div v-if="newUser" class="modal is-active">
@@ -98,5 +98,7 @@ function saveUser(){
 </template>
 
 <style scoped>
-
+    .button{
+        margin-left: 57px;
+    }
 </style>

@@ -9,10 +9,6 @@ import AddActivity from '@/components/AddActivity.vue';
             <div class="column is-two-thirds">
                 <h1 class="title">Friends activity</h1>
                 <AddActivity></AddActivity>
-
-
-                
-
                 <ActivityList></ActivityList>
             </div>
         </div>

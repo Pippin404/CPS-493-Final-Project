@@ -40,7 +40,7 @@ function toggleMenu() {
   <div :class="{ 'is-active': isActive } " id="navbarBasicExample" class="navbar-menu m-auto"  >
     <div class="navbar-start">
       
-      <RouterLink to="/documentation" class="navbar-item m-auto">
+      <RouterLink to="/Activity" class="navbar-item m-auto">
         <span class="icon-text">
         <span class="icon">
           <i class="fas fa-running"></i>
