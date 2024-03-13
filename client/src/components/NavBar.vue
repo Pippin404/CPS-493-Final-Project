@@ -5,7 +5,8 @@ import { ref } from 'vue';
 
 const isActive = ref(false);
 const UserProfile=ref('');
-
+//this will be changed to a function that checks if the user is an admin
+//remember the UserProfile is an email address
 
 function toggleMenu() {
   isActive.value = !isActive.value;
@@ -71,18 +72,17 @@ function toggleMenu() {
       </span>
       </RouterLink>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <div v-if="UserProfile ==='plotkinm@newpaltz.edu'" class="navbar-item has-dropdown is-hoverable"></div>
         <a class="navbar-link">
           Admin
-        </a>
-
+        </a>    
         <div class="navbar-dropdown">
           <RouterLink to="/products" class="navbar-item">
             Users
           </RouterLink>
         </div>
       </div>
-    </div>
+
 
     <div class="navbar-end">
       <div class="navbar-item">
@@ -132,9 +132,9 @@ function toggleMenu() {
             </a>
           </p>
 
+</div>  
 
 
-  </div>
 </nav>
 </template>
 
