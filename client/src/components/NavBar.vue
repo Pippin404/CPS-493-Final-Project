@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
+import { ref , onMounted } from 'vue';
 import { setCurrentUser,getCurrentUser } from '@/model/currentUser';
+import { type UserRoot, getUsers } from '@/model/users';
 import UserImage from './UserImage.vue';
+
+const products = ref([] as UserRoot[]);
+
+onMounted(async () => {
+    products.value = await getUsers();
+});
 
 const isActive = ref(false);
 const UserProfile=ref('');
@@ -109,15 +116,14 @@ const isAdmin=ref(false);
           Login
       
           <div class="navbar-dropdown">
-            <div class="navbar-item" @click="setCurrentUser('plotkinm@newpaltz.edu'); isAdmin=true">
-              Moshe
+            <div 
+            class="navbar-item" 
+            v-for="user in products" 
+            :key="user.email" 
+            @click="setCurrentUser(user.email); isAdmin=user.admin"
+            >
+              {{ user.firstName }} {{ user.lastName }}
             </div>
-            <div class="navbar-item" @click="setCurrentUser('jane.smith@example.com'); isAdmin=false;">
-              Jane Smith
-            </div>
-            <div class="navbar-item" @click="setCurrentUser('mike.johnson@example.com'); isAdmin=false;">
-              Mike Johnson
-          </div>
           
           </div>
         </a>
