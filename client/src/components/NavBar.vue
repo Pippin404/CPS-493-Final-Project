@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
-
+import { setCurrentUser,getCurrentUser } from '@/model/currentUser';
 
 const isActive = ref(false);
 const UserProfile=ref('');
@@ -83,6 +83,7 @@ function toggleMenu() {
         </div>
       </div>
     </div>
+    <p>Current user: {{ getCurrentUser() }}</p>
 
     <div class="navbar-end">
       <div class="navbar-item">
@@ -104,7 +105,7 @@ function toggleMenu() {
           Login
       
           <div class="navbar-dropdown">
-            <div class="navbar-item" @click="UserProfile='plotkinm@newpaltz.edu'">
+            <div class="navbar-item" @click="setCurrentUser('plotkinm@newpaltz.edu')">
               Moshe
             </div>
             <div class="navbar-item" @click="UserProfile='jane.smith@example.com'">
