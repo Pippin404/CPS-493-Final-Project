@@ -31,8 +31,8 @@
       </p>
 
       <div v-for="activity in Activities" :key="activity.email" class="card">
-        <div class="card-content">
           <div v-if="activity.email == getCurrentUser()">
+            <div class="card-content">
             <h4 class="subtitle is-4">{{ activity.email }}</h4>
             <h3 class="subtitle is-6"> At {{ activity.date }}</h3>
             <br>
@@ -48,8 +48,6 @@
 </template>
 
 <style scoped>
-    
-
     .small{
         width: 30%;
         margin: 30px;

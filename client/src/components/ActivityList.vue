@@ -49,8 +49,7 @@ function isMatchingEmail(userEmail: string, productEmail: string): boolean {
                             </div>
                             
                         </div>  
-                    </div>
-
+                    
                     <!--Other Card Content-->
                     <h3 class="subtitle is-6"> At {{ product.date }}</h3>
                     <br>
@@ -63,6 +62,7 @@ function isMatchingEmail(userEmail: string, productEmail: string): boolean {
                         <i class="fas fa-retweet"></i>
                         <i class="fas fa-heart"></i>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ function isMatchingEmail(userEmail: string, productEmail: string): boolean {
 
 
 
-    </div>
+</div>
 </template>
 
 <style scoped>
@@ -110,12 +110,9 @@ function isMatchingEmail(userEmail: string, productEmail: string): boolean {
     .userInfo{
         font-size: 30px;
         color:black;
-        margin: 10px;
     }
 
     .userImage{
-
         height: 40px;
-
     }
 </style>
