@@ -44,10 +44,10 @@
             <p class="subtitle value">
               0 Ft
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               Duration: 0 min
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               Avr. Pace: 0ft
             </p>
 
@@ -65,10 +65,10 @@
             <p class="subtitle value">
               0 Ft
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               Duration: 0 min
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               Avr. Pace: 0ft
             </p>
             
@@ -94,10 +94,10 @@
             <p class="subtitle value">
               {{ totalDistance}} Ft
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               Duration: {{totalDuration}} min
             </p>
-            <p class="subtitle value r">
+            <p class="subtitle value">
               {{ averageTimeCalc() }}
               Avr. Pace: {{ averageTime }} ft/min
             </p>
