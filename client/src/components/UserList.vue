@@ -1,5 +1,5 @@
 <script setup lang="ts">
-     import { ref, computed, onMounted } from 'vue';
+    import { ref, computed, onMounted } from 'vue';
     import { type UserRoot, getUsers } from "@/model/users";
     const products = ref([] as UserRoot[]);
 
