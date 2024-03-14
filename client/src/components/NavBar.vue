@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 import { setCurrentUser,getCurrentUser } from '@/model/currentUser';
+import UserImage from './UserImage.vue';
 
 const isActive = ref(false);
 const UserProfile=ref('');
@@ -91,8 +92,8 @@ const isAdmin=ref(false);
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
+            <UserImage></UserImage>
             <strong> {{getCurrentUser()}}</strong>
-
           </a>
         </div>
       </div>
@@ -143,6 +144,10 @@ const isAdmin=ref(false);
 </template>
 
 <style scoped>
+
+  .UserImage{
+    margin-right: 10px;
+  }
 
     .router-link-active {
         border-bottom: 2px solid #00d1b2;

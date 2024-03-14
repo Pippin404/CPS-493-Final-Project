@@ -32,7 +32,6 @@
 
       <div v-for="activity in Activities" :key="activity.email" class="card">
         <div class="card-content">
-
           <div v-if="activity.email == getCurrentUser()">
             <h4 class="subtitle is-4">{{ activity.email }}</h4>
             <h3 class="subtitle is-6"> At {{ activity.date }}</h3>
