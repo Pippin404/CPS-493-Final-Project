@@ -12,3 +12,4 @@ export interface UserRoot {
 export function getUsers(): UserRoot[] {
     return data.items;
   }
+  

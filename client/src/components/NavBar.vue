@@ -10,6 +10,9 @@ const UserProfile=ref('');
 function toggleMenu() {
   isActive.value = !isActive.value;
 }
+
+const isAdmin=ref(false);
+
 </script>
 
 
@@ -76,28 +79,28 @@ function toggleMenu() {
           Admin
         </a>
 
-        <div class="navbar-dropdown">
+        <div class="navbar-dropdown" v-if="isAdmin">
           <RouterLink to="/products" class="navbar-item">
             Users
           </RouterLink>
         </div>
       </div>
     </div>
-    <p>Current user: {{ getCurrentUser() }}</p>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary">
-            <strong> {{UserProfile}}</strong>
+            <strong> {{getCurrentUser()}}</strong>
+
           </a>
         </div>
       </div>
     </div>
     
       <div class="navbar-item has-dropdown is-hoverable  button is-light margin">
-        <a class="navbar-link" v-if="UserProfile">
-            <a @click="UserProfile=''">
+        <a class="navbar-link" v-if="getCurrentUser()">
+            <a @click="setCurrentUser('');  isAdmin=false;">
             Logout
           </a>
         </a>
@@ -105,13 +108,13 @@ function toggleMenu() {
           Login
       
           <div class="navbar-dropdown">
-            <div class="navbar-item" @click="setCurrentUser('plotkinm@newpaltz.edu')">
+            <div class="navbar-item" @click="setCurrentUser('plotkinm@newpaltz.edu'); isAdmin=true">
               Moshe
             </div>
-            <div class="navbar-item" @click="UserProfile='jane.smith@example.com'">
+            <div class="navbar-item" @click="setCurrentUser('jane.smith@example.com'); isAdmin=false;">
               Jane Smith
             </div>
-            <div class="navbar-item" @click="UserProfile='mike.johnson@example.com'">
+            <div class="navbar-item" @click="setCurrentUser('mike.johnson@example.com'); isAdmin=false;">
               Mike Johnson
           </div>
           
@@ -123,7 +126,7 @@ function toggleMenu() {
 
 
         <p class="control">
-            <a class="bd-tw-button button margin" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+            <a class="bd-tw-button button margin" data-social-network="Twitter" >
               <span class="icon">
                 <i class="fab fa-twitter"></i>
               </span>
